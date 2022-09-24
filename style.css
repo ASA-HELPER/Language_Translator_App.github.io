@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(2, 2, 2);
+}
+
+.container{
+    width: 690px;
+    background: rgb(254, 0, 0);
+    border-radius: 7px;
+    padding: 30px;
+}
+
+.wrapper{
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.wrapper .text-input{
+    display: flex;
+}
+
+.text-input textarea{
+    height: 250px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.controls,li,.icons,.icons i{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls{
+    list-style: none;
+    padding: 12px 15px;
+}
+
+.controls .row .icons{
+    width: 40%;
+}
+
+.controls .row .icons i{
+    width: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    justify-content: center;
+}
+
+.controls .row.from .icons{
+    padding-right: 15px;
+    border-right: 1px solid #ccc;
+}
+
+.controls .row.to .icons{
+    padding-left: 15px;
+    border-left: 1px solid #ccc;
+}
+
+.controls .row select{
+    color: #333;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+.text-input textarea::-webkit-scrollbar{
+    width: 4px;
+}
+
+.controls .row select::webkit-scrollbar{
+    width: 8px;
+}
+
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track{
+  background: #fff;
+}
+
+.text-input textarea::-webkit-scrollbar-thumb{
+    background: #ddd;
+    border-radius: 8px;
+  }
+  .controls .row select::-webkit-scrollbar-thumb{
+    background: #999;
+    border-radius: 8px;
+    border-right: 2px solid #ffffff;
+  }
+  .controls .exchange{
+    color: #adadad;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+  }
+
+.controls .exchange{
+    color: #adadad;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.controls i:active{
+    transform: scale(0.5);
+}
+
+.container button{
+    width: 100%;
+    padding: 14px;
+    outline: none;
+    border: none;
+    color: yellow;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    background: black;
+}
+
+.container button:hover{
+    color: red;
+}
+
+@media(max-width:660px)
+{
+    .container{
+        padding: 20px;
+    }
+    .wrapper .text-input{
+        flex-direction: column;
+    }
+    .text-input .to-text{
+        border-left: 0px;
+        border-top: 1px solid #ccc;
+    }
+    .container button{
+        padding: 13px;
+        font-size: 16px;
+    }
+    .controls .row select{
+        font-size: 16px;
+    }
+    .controls .exchange{
+        font-size: 14px;
+    }
+}
